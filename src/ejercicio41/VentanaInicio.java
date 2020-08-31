@@ -131,3 +131,4 @@ public class VentanaInicio extends JFrame
 			}
 	}
 }
+Leocristalli12
