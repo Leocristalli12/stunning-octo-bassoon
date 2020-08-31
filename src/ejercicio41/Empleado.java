@@ -1,9 +1,10 @@
 package ejercicio41;
 
-public class Empleado {
+public class Empleado 
+{
 	private String nombre, apellido;
-	private int totalHoras;
-	public int getTotalHoras() {
+	private float totalHoras;
+	public float getTotalHoras() {
 		return totalHoras;
 	}
 	public void setTotalHoras(int totalHoras) {
@@ -23,3 +24,4 @@ public class Empleado {
 	}
 
 }
+
