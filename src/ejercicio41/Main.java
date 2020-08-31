@@ -7,9 +7,10 @@ import javax.swing.JOptionPane;
 public class Main 
 {
 	private static ArrayList<Empleado> empleados = new ArrayList<Empleado>();
+	private static VentanaInicio laVentana;
 	public static void main(String[] args) 
 	{
-		VentanaInicio laVentana = new VentanaInicio();
+		laVentana = new VentanaInicio(empleados);
 		
 	}
 	public static void cargarEmpleados()
@@ -24,11 +25,12 @@ public class Main
 			totalHoras = Integer.parseInt(JOptionPane.showInputDialog("Ingrese la cantidad de horas semanales trabajadas por el empleado"));
 			empleado.setTotalHoras(totalHoras);
 			empleados.add(empleado);
-			otro = JOptionPane.showConfirmDialog(null, "¿Desea ingresar otro empleado?");
+			otro = JOptionPane.showConfirmDialog(null, "ï¿½Desea ingresar otro empleado?");
 		}
 	}
 	public static void cargarDefaultEmpleados()
 	{
+		empleados.clear();
 		Empleado empleado1 = new Empleado();
 		empleado1.setNombre("Leonardo");
 		empleado1.setApellido("Cristalli");
@@ -44,6 +46,5 @@ public class Main
 		empleados.add(empleado1);
 		empleados.add(empleado2);
 		empleados.add(empleado3);
-		
 	}
 }
